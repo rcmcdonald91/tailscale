@@ -207,6 +207,7 @@ func newUserspaceRouterAdvanced(logf logger.Logf, tunname string, netMon *netmon
 	//  -A mwan3_fallback_policy -m mark --mark 0x0/0x3f00 -j MARK --set-xmark 0x100/0x3f00
 	//
 	// which coupled with an ip rule:
+
 	//  2001: from all fwmark 0x100/0x3f00 lookup 1
 	//
 	// has the effect of gobbling tailscale packets, because tailscale by default installs
